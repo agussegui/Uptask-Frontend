@@ -4,6 +4,7 @@ import { getProjectById } from "@/api/ProjectAPI"
 import AddTaskModal from "@/components/tasks/AddTaskModal"
 import TaskList from "@/components/tasks/TaskList"
 import EditTaskData from "@/components/tasks/EditTaskData"
+import TaskModalDetails from "@/components/tasks/TaskModalDetails"
 
 export default function ProjectsDetailsView() {
 
@@ -13,7 +14,7 @@ export default function ProjectsDetailsView() {
     const projectId = params.projectId! 
 
     const { data, isLoading, isError } = useQuery({
-        queryKey: ["editProject", projectId],
+        queryKey: ["project", projectId],
         queryFn: () => getProjectById(projectId), //Function for doing the consult to the API by ID
         retry: false
     });
@@ -39,6 +40,7 @@ export default function ProjectsDetailsView() {
             />
             <AddTaskModal/>
             <EditTaskData/>
+            <TaskModalDetails/>
         
         </>
     )

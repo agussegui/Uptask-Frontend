@@ -1,5 +1,7 @@
 import { Task } from "@/types/index"
 import TaskCard from "./TaskCard"
+import { statusTranslations } from "@/locales/es"
+
 
 type TaskListProps = {
     tasks: Task[]
@@ -15,23 +17,13 @@ const initialStatusGroups : GroupedTasks = {
     completed: [],
 }
 
-const statusStyles : {[key: string] : string } = {
+export const statusStyles : {[key: string] : string } = {
     pending: 'border-t-blue-600',
     onHold: 'border-t-red-500',
     inProgress: 'border-t-orange-500',
     underReview: 'border-t-amber-400',
     completed: 'border-t-green-700',
 }
-
-//marcaba ese error porque decía bueno, tú le estás pasando el estado como un string, pero estas son llaves de objeto, Entonces le cambiamos o le damos esta firma y le decimos que estos también van a ser strings
-const statusTranslations : {[key: string] : string } = {
-    pending: 'Pendiente',
-    onHold: 'En Espera',
-    inProgress: 'En Progreso',
-    underReview: 'En Revisión',
-    completed: 'Completado',
-}
-
 
 
 export default function TaskList({tasks}: TaskListProps) {
