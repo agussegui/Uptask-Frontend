@@ -26,7 +26,7 @@ export default function TaskCard({task}: TaskCardProps) {
         },
         onSuccess: (data) => {
             toast.success(data)
-            queryClient.invalidateQueries({queryKey: ["project", projectId]})
+            queryClient.invalidateQueries({queryKey: ['project', projectId]})
         }
     })
 

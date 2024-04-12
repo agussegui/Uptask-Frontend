@@ -28,25 +28,21 @@ export default function TaskModalDetails() {
     })
 
     const queryClient = useQueryClient()
-    const {mutate} = useMutation({
+    const { mutate } = useMutation({
         mutationFn: updateStatus,
         onError: (error) => {
             toast.error(error.message)
         },
         onSuccess: (data) => {
-            
             toast.success(data)
-            queryClient.invalidateQueries({queryKey: ['project', projectId]})
-            queryClient.invalidateQueries({queryKey: ['task', taskId]})
-
+            queryClient.invalidateQueries({ queryKey: ["project", projectId] })
+            queryClient.invalidateQueries({ queryKey: ['task', taskId] })
         }
     })
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        
         const status = e.target.value as TaskStatus
-        const data = {projectId, taskId, status}
-
+        const data = { projectId, taskId, status }
         mutate(data)
     }
 
@@ -102,12 +98,9 @@ export default function TaskModalDetails() {
                                             onChange={handleChange}
                                         >
                                             {Object.entries(statusTranslations).map(([key, value]) => (
-                                                <option 
-                                                    key={key} 
-                                                    value={key}
-                                                >{value}
-                                                </option>
-                                            ))} //Esto se hace asi porque tiene un bbjeto si fuese solo un arreglo se hace de otra manera
+                                                <option key={key} value={key}>{value}</option>
+                                            ))}
+                                            //Esto se hace asi porque tiene un bbjeto si fuese solo un arreglo se hace de otra manera
                                         </select>
                                     </div>
                                 </Dialog.Panel>

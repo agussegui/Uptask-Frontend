@@ -17,7 +17,7 @@ const initialStatusGroups : GroupedTasks = {
     completed: [],
 }
 
-export const statusStyles : {[key: string] : string } = {
+const statusStyles : {[key: string] : string } = {
     pending: 'border-t-blue-600',
     onHold: 'border-t-red-500',
     inProgress: 'border-t-orange-500',
