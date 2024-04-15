@@ -142,6 +142,11 @@ export default function RegisterView() {
           to={'/auth/login'}
           className="text-center text-gray-200 hover:text-violet-400 hover:transition-colors"
         >¿Ya tines una cuenta? Iniciar Sesión</Link>
+
+        <Link 
+          to={'/auth/forgot-password'}
+          className="text-center text-gray-200 hover:text-violet-400 hover:transition-colors"
+        >¿Olvidaste la contreseña? Reestablecer</Link>
       </nav>
 
     </>
