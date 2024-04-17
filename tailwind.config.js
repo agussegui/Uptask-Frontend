@@ -5,8 +5,15 @@ export default {
     "./src/**/*.{js,ts,tsx,jsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'montserrat': ['Montserrat', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
+  variants: {},
+  
 }
+
 
