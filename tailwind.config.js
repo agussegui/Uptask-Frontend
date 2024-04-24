@@ -1,23 +1,25 @@
-
 /** @type {import('tailwindcss').Config} */
 
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,tsx,jsx}",
+    "./index.html", "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
+  
   theme: {
-    extend: {
-      fontFamily: {
-        'montserrat': ['Montserrat', 'sans-serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('flowbite/plugin')
   ],
   variants: {},
 }
+
+
+
+
+
 
 
 
