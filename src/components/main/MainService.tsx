@@ -4,7 +4,7 @@ export default function MainService() {
       <>
         <section className="bg-gray-200 py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-5xl text-blue-800 font-bold text-center mb-10">
+            <h2 className="text-5xl font-bold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r to-blue-700 from-violet-500">
               Nuestros Servicios
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

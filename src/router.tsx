@@ -18,6 +18,9 @@ import ProfileLayout from "./layouts/ProfileLayout";
 import NotFound from "./views/404/NotFound";
 import NotFoundLayout from "./layouts/NotFoundLayout";
 import MainLayout from "./layouts/MainLayout";
+import MainCookiesView from "./views/main/MainCookiesView";
+import MainPrivacyView from "./views/main/MainPrivacyView";
+import MainAboutView from "./views/main/MainAboutView";
 import MainView from "./views/main/MainView";
 
 export default function router() {
@@ -26,10 +29,12 @@ export default function router() {
     
     <BrowserRouter>
       <Routes>
-        <Route element={<MainLayout/>}>
-          <Route path='/main' element={<MainView/>} />
-        </Route>
-
+          <Route element={<MainLayout/>}>
+            <Route path="/main" element={<MainView />} />
+          </Route>
+          <Route path='/main/about' element={<MainAboutView />} />
+          <Route path='/main/privacy' element={<MainPrivacyView />} />
+          <Route path='/main/cookies' element={<MainCookiesView />} />
         <Route element={<AppLayout/>}>
           <Route path='/' element={<DashboardView/>} index/>
           <Route path='/projects/create' element={<CreateProjectView/>} />

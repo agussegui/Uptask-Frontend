@@ -12,7 +12,7 @@ export default function MainHeader() {
   return (
     <>
       <header >
-        <nav className=" fixed bg-gray-800 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 ">
+        <nav className=" bg-gray-800 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 ">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <div className="w-64 xs:w-full ">
               <Link to={"/main"}>

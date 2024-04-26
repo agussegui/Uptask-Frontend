@@ -28,13 +28,13 @@ export default function ProfileForm({ data } : ProfileFormProps) {
 
     return (
         <>
-            <div className="mx-auto max-w-3xl g">
+            <div className="mx-auto max-w-3xl ">
                 <h1 className="text-5xl font-bold ">Mi Perfil</h1>
                 <p className="text-2xl font-light text-gray-500 mt-5">Aquí puedes actualizar tu información</p>
 
                 <form
                     onSubmit={handleSubmit(handleEditProfile)}
-                    className=" mt-14 space-y-5 rounded-lg my-20 bg-white shadow-lg p-10 rounded-l"
+                    className=" mt-14 space-y-5 rounded-lg my-20 bg-white shadow-lg p-10"
                     noValidate
                 >
                     <div className="mb-5 space-y-3">
