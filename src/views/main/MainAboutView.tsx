@@ -5,7 +5,7 @@ export default function MainAboutView() {
     return (
         <>
             <MainHeader />
-            <div className="flex justify-center min-h-screen mt-20">
+            <div className="flex justify-center min-h-screen mt-52">
                 <div className="text-left w-1/2 container flex justify-center">
                     <div className="w-1/2">
                         <h2 className="text-4xl text-blue-800 font-medium">Términos y Condiciones de UpTask</h2>

@@ -47,7 +47,7 @@ export default function MainBenefits() {
                               />
                             </svg>
                             <div>
-                                <p className="font-bold uppercase text-gray-700 text-2xl mb-2">Eficiente de Tareas</p>
+                                <p className="font-bold uppercase text-gray-700 text-2xl mb-2">Eficiencia de las Tareas</p>
                                 <p className="font-normal text-md text-gray-800">Organiza tus tareas de manera eficiente</p>
                             </div>
                         </li>

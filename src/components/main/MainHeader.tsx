@@ -9,10 +9,17 @@ export default function MainHeader() {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (sectionId : string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <header >
-        <nav className=" bg-gray-800 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 ">
+      <header className="mb-10">
+        <nav className="fixed bg-gray-800 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <div className="w-64 xs:w-full ">
               <Link to={"/main"}>
@@ -70,33 +77,37 @@ export default function MainHeader() {
               <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
                   <Link
-                    to={"/"}
-                    className=" text-xl block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                    to={"/main"}
+                    className=" text-xl block py-2 px-3 text-white bg-blue-700 hover:text-blue-700 rounded md:bg-transparent md:text-white md:p-0 md:dark:text-white"
                     aria-current="page"
+                    onClick={() => scrollToSection("home")}
                   >
                     Inicio
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to={"/"}
+                    to={"#benefit"}
                     className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-xl"
+                    onClick={() => scrollToSection("benefit")}
                   >
                     Beneficios
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to={"/"}
+                    to={"#service"}
                     className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-xl"
+                    onClick={() => scrollToSection("service")}
                   >
                     Servicios
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to={"/"}
+                    to={"#contact"}
                     className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 text-xl"
+                    onClick={() => scrollToSection("contact")}
                   >
                     Contacto
                   </Link>

@@ -33,16 +33,16 @@ export default function ProjectsDetailsView() {
             <p className="text-2xl font-light text-gray-500 mt-5">{data.description}</p>
 
             {isManager(data.manager, user._id) && (
-                <nav className="my-5 flex gap-3">
+                <nav className="my-5 md:flex md:gap-3 max-md:py-4">
                     <button
                         type="button"
-                        className="bg-violet-500 hover:bg-violet-900 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors" 
+                        className="max-lg:text-base bg-violet-500 hover:bg-violet-900 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors max-md:mb-8" 
                         onClick={() => navigate(location.pathname + '?newTask=true')}
                     >Agregar Tarea</button>
 
                     <Link 
                         to={'team'}
-                        className="bg-fuchsia-400 hover:bg-fuchsia-700 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+                        className="max-lg:text-base bg-fuchsia-400 hover:bg-fuchsia-700 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors "
                     >Colaboladores</Link>
                 </nav>
             )}
