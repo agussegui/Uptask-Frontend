@@ -10,8 +10,8 @@ export default {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('flowbite/plugin')
+    import('@tailwindcss/forms'),
+    import('flowbite/plugin')
   ],
   variants: {},
 }
