@@ -7,7 +7,6 @@ import { authenticateUser } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
 
 export default function LoginView() {
-  
   const initialValues: UserLoginForm = {
     email: "",
     password: "",
@@ -18,90 +17,103 @@ export default function LoginView() {
     handleSubmit,
     formState: { errors },
   } = useForm({ defaultValues: initialValues });
-  const navigate = useNavigate()
-  
-  const {mutate} = useMutation({ 
+  const navigate = useNavigate();
+
+  const { mutate } = useMutation({
     mutationFn: authenticateUser,
     onError: (error) => {
-      toast.error(error.message)
-      
+      toast.error(error.message);
     },
     onSuccess: () => {
       //llevar al usuario al pagina de crear Proyectos
-      toast.success('Iniciando Sesión')
-      navigate('/')
-    }
-  })
+      toast.success("Iniciando Sesión");
+      navigate("/");
+    },
+  });
 
   const handleLogin = (formData: UserLoginForm) => mutate(formData);
 
   return (
     <>
-      <h1 className="text-5xl text-center font-black text-white">Iniciar Sesión</h1>
-      <p className="text-xl text-center font-light text-white mt-5 p-4">
-        Comienza a planear tus proyectos {''}
-        <span className=" text-violet-500 font-bold"> inciando sesión</span>
-      </p>
+      <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="w-full max-w-xl p-6">
+          <h2 className="text-4xl font-semibold text-blue-600 text-center mb-4 flex flex-start">
+            Iniciar Sesión
+          </h2>
+          <p className="text-lg flex-start flex text-center text-gray-400 mb-2">
+            ¿No tienes cuenta?
+            <Link
+              to={"/auth/register"}
+              className="text-blue-600 hover:underline ml-4"
+            >
+              Crear Una Cuenta
+            </Link>
+          </p>
+          <p className="text-lg flex-start flex text-center text-gray-400 ">
+            Tomará menos de un minuto
+          </p>
 
-      <form
-        onSubmit={handleSubmit(handleLogin)}
-        className="space-y-8 p-10 bg-white "
-        noValidate
-      >
-        <div className="flex flex-col gap-5">
-        
-          <label className="font-normal text-2xl">Email</label>
+          <form
+            onSubmit={handleSubmit(handleLogin)}
+            className="space-y-9 mt-16"
+            noValidate
+          >
+            <div className="relative">
+              {errors.email && (
+                <ErrorMessage>{errors.email.message}</ErrorMessage>
+              )}
+              <label className="mb-1 text-xl font-semibold text-gray-600">
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email de Registro"
+                className="w-full px-4 py-2 pr-10 text-md border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200 ease-in-out bg-gray-100 m-4 "
+                {...register("email", {
+                  required: "El Email es obligatorio",
+                  pattern: {
+                    value: /\S+@\S+\.\S+/,
+                    message: "E-mail no válido",
+                  },
+                })}
+              />
+            </div>
+            <div className="relative">
+              {errors.password && (
+                <ErrorMessage>{errors.password.message}</ErrorMessage>
+              )}
+              <label className=" text-xl font-semibold text-gray-600">
+                Password
+              </label>
 
-          <input
-            id="email"
-            type="email"
-            placeholder="Email de Registro"
-            className="w-full p-3  border-gray-300 border rounded-md"
-            {...register("email", {
-              required: "El Email es obligatorio",
-              pattern: {
-                value: /\S+@\S+\.\S+/,
-                message: "E-mail no válido",
-              },
-            })}
-          />
-          {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+              <input
+                type="password"
+                placeholder="Password de Registro"
+                className="w-full px-4 py-2 pr-10 text-md border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200 ease-in-out bg-gray-100 m-4 "
+                {...register("password", {
+                  required: "El Password es obligatorio",
+                })}
+              />
+            </div>
+
+            <input
+              type="submit"
+              value="Iniciar Sesión"
+              className="bg-blue-600 hover:bg-blue-700 hover:transition-colors w-full p-3  text-white font-black  text-xl cursor-pointer"
+            />
+          </form>
+
+          <nav className="p-6 flex flex-col space-y-4 justify-center">
+            <Link
+              to={"/auth/forgot-password"}
+              className="text-center text-blue-600 hover:underline hover:transition-colors"
+            >
+              ¿Olvidaste la contreseña? Reestablecer
+            </Link>
+          </nav>
         </div>
-
-        <div className="flex flex-col gap-5">
-          <label className="font-normal text-2xl">Password</label>
-
-          <input
-            type="password"
-            placeholder="Password de Registro"
-            className="w-full p-3  border-gray-300 border rounded-md"
-            {...register("password", {
-              required: "El Password es obligatorio",
-            })}
-          />
-          {errors.password && (
-            <ErrorMessage>{errors.password.message}</ErrorMessage>
-          )}
-        </div>
-
-        <input
-          type="submit"
-          value="Iniciar Sesión"
-          className="bg-violet-600 hover:bg-violet-700 hover:transition-colors w-full p-3 rounded-md text-white font-black  text-xl cursor-pointer"
-        />
-      </form>
-
-      <nav className="p-6 flex flex-col space-y-4 justify-center">
-        <Link 
-          to={'/auth/register'}
-          className="text-center text-gray-200 hover:text-violet-400 hover:transition-colors"
-        >¿No tienes cuenta? Crear Una</Link>
-
-        <Link 
-          to={'/auth/forgot-password'}
-          className="text-center text-gray-200 hover:text-violet-400 hover:transition-colors"
-        >¿Olvidaste la contreseña? Reestablecer</Link>
-      </nav>
+      </div>
     </>
   );
 }
