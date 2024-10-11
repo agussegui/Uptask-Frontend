@@ -46,18 +46,18 @@ export default function EditProjectForm({data, projectId} : EditProjectFormProps
     return (
         <>
             <div className="max-w-3xl mx-auto">
-                <h1 className="text-5xl font-bold ">Editar Proyecto</h1>
+                <h1 className="text-5xl font-semibold text-gray-950 text-center mb-4 flex flex-start">Editar Proyecto</h1>
                 <p className="text-2xl font-light text-gray-600 mt-5">Llena el siguiente formulario para editar el proyecto</p>
 
                 <nav className="my-5">   
                     <Link
-                        className="bg-violet-400 hover:bg-violet-600 px-10 py-3 text-white rounded-md text-xl font-bold cursor-pointer transition-colors"
+                        className="bg-blue-700 hover:bg-blue-900 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
                         to='/'
                     >Volver a Proyectos</Link>
                 </nav> 
 
                 <form
-                    className="mt-10 bg-white shadow-lg p-10 rounded-lg"
+                    className="mt-10 space-y-9"
                     onSubmit={handleSubmit(handleForm)}
                     noValidate
                 >

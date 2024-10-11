@@ -28,25 +28,25 @@ export default function ProfileForm({ data } : ProfileFormProps) {
 
     return (
         <>
-            <div className="mx-auto max-w-3xl ">
-                <h1 className="text-5xl font-bold ">Mi Perfil</h1>
-                <p className="text-2xl font-light text-gray-500 mt-5">Aquí puedes actualizar tu información</p>
+            <div className="mx-auto max-w-xl">
+                <h1 className="text-5xl font-semibold text-gray-900 text-center mb-4 flex flex-start">Mi Perfil</h1>
+                <p className="text-xl font-light text-gray-500 mt-5">Aquí puedes actualizar tu información</p>
 
                 <form
                     onSubmit={handleSubmit(handleEditProfile)}
-                    className=" mt-14 space-y-5 rounded-lg my-20 bg-white shadow-lg p-10"
+                    className="space-y-9 pt-10"
                     noValidate
                 >
-                    <div className="mb-5 space-y-3">
+                    <div className="relative">
                         <label
-                            className="text-sm uppercase font-bold"
+                            className="mb-1 text-xl font-semibold text-gray-600"
                             htmlFor="name"
                         >Nombre</label>
                         <input
                             id="name"
                             type="text"
                             placeholder="Tu Nombre"
-                            className="w-full p-3  border bg-gray-100 border-gray-200 rounded-md"
+                            className="w-full px-4 py-2 text-md border-b-2 border-gray-300 focus:outline-none focus:border-violet-500 transition duration-200 ease-in-out bg-gray-100 m-4"
                             {...register("name", {
                                 required: "Nombre de usuario es obligatoro",
                             })}
@@ -56,16 +56,16 @@ export default function ProfileForm({ data } : ProfileFormProps) {
                         )}
                     </div>
 
-                    <div className="mb-5 space-y-3">
+                    <div className="relative">
                         <label
-                            className="text-sm uppercase font-bold"
+                            className="mb-1 text-xl font-semibold text-gray-600"
                             htmlFor="password"
                         >E-mail</label>
                         <input
                             id="text"
                             type="email"
                             placeholder="name@flowbite.com"
-                            className="w-full p-3  border bg-gray-100 border-gray-200 rounded-md"
+                            className="w-full px-4 py-2 text-md border-b-2 border-gray-300 focus:outline-none focus:border-violet-500 transition duration-200 ease-in-out bg-gray-100 m-4"
                             {...register("email", {
                                 required: "EL e-mail es obligatorio",
                                 pattern: {

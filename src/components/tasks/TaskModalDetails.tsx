@@ -111,7 +111,7 @@ export default function TaskModalDetails() {
                                         <label className='font-bold'>Estado Actual:</label>
 
                                         <select 
-                                            className='w-full p-3 bg-white border border-gray-300 rounded-sm'
+                                            className='w-full px-4 py-3 text-md border-b-2 border-gray-300 focus:outline-none focus:border-violet-500 transition duration-200 ease-in-out bg-gray-50 '
                                             defaultValue={data.status}
                                             onChange={handleChange}
                                         >

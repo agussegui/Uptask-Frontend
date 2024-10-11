@@ -23,14 +23,14 @@ export default function DashboardView() {
   if (data && user)
     return (
       <>
-        <h1 className="text-5xl font-bold ">Mis Proyectos</h1>
-        <p className="text-2xl font-light text-gray-600 mt-5">
+        <h1 className="text-5xl font-semibold text-gray-950 ">Mis Proyectos</h1>
+        <p className="text-2xl font-light text-gray-600 my-8">
           Maneja y adiminstra tus proyectos{" "}
         </p>
 
         <nav className="my-5">
           <Link
-            className="bg-blue-700 hover:bg-blue-900 px-10 py-3 text-white rounded-md text-xl font-bold cursor-pointer transition-colors"
+            className="bg-blue-700 hover:bg-blue-900 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
             to="/projects/create"
           >
             Nuevo Proyecto

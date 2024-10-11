@@ -20,7 +20,7 @@ export default function MainHome() {
                 prevWordIndex === wordsList.length - 1 ? 0 : prevWordIndex + 1
               );
               setCurrentLetterIndex(0);
-            }, 1500); // Espera 3 segundos antes de cambiar de palabra
+            }, 1750); // Espera 3 segundos antes de cambiar de palabra
             return wordLength;
           } else {
             return prevIndex + 1;
@@ -34,7 +34,7 @@ export default function MainHome() {
 
     return (
       <>
-        <main className="bg-gray-100 max-md:mt-52 mt-32">
+        <main className="bg-gray-100 max-md:mt-52 mt-44">
           <div className="w-full flex flex-col-reverse justify-between items-center sm:flex-row relative">
             {/* Contenedor de texto */}
             <div className="w-full sm:w-7/12 my-8 sm:my-32 mx-20 text-center sm:text-left z-10">
@@ -59,7 +59,7 @@ export default function MainHome() {
             <div className="w-full lg:w-5/12 absolute inset-0 flex justify-center items-center lg:relative md:flex-col sm:items-start     sm:justify-start">
               <img
                 src="logo.png"
-                alt=""
+                alt="Logo Uptask"
                 className="w-auto  max-lg:opacity-25"
               />
             </div>

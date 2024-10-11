@@ -28,63 +28,64 @@ export default function ForgotPasswordView() {
 
     return (
         <>
-        
-            <h1 className="text-5xl text-center font-black text-white">Reestablecer Contraseña</h1>
-            <p className="text-lg text-center font-light text-white mt-5 pt-2">
-                ¿Olvidaste tu password? Coloca tu Email {''}
-                <span className=" text-violet-500 font-bold"> y reestablece tu password</span>
-            </p>
-        
-            <form
-              onSubmit={handleSubmit(handleForgotPassword)}
-              className="space-y-8 p-10  bg-white"
-              noValidate
-            >
-              <div className="flex flex-col gap-5">
-                <label
-                  className="font-normal text-2xl"
-                  htmlFor="email"
-                >Email</label>
+          <div className="flex justify-center items-center h-screen bg-gray-100">
+            <div className="w-full max-w-xl p-6">
+              <h1 className="text-4xl font-semibold text-blue-600 text-center mb-8 flex flex-start ">Reestablecer Contraseña</h1>
+              <p className="text-md font-normal text-gray-400 text-center mb-4 flex flex-start">
+                ¿Olvidaste tu password? Coloca tu Email y reestablece tu password
+              </p>
+              <form
+                onSubmit={handleSubmit(handleForgotPassword)}
+                className="space-y-9 mt-16"
+                noValidate
+              >
+                <div className="relative">
+                  <label
+                    className="text-xl font-semibold text-gray-600"
+                    htmlFor="email"
+                  >Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="Email de Registro"
+                    className="w-full px-4 py-2 text-md border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200 ease-in-out bg-gray-100 m-2"
+                    {...register("email", {
+                      required: "El Email de registro es obligatorio",
+                      pattern: {
+                        value: /\S+@\S+\.\S+/,
+                        message: "E-mail no válido",
+                      },
+                    })}
+                  />
+                  {errors.email && (
+                    <ErrorMessage>{errors.email.message}</ErrorMessage>
+                  )}
+                </div>
+                
                 <input
-                  id="email"
-                  type="email"
-                  placeholder="Email de Registro"
-                  className="w-full p-3  border-gray-300 border"
-                  {...register("email", {
-                    required: "El Email de registro es obligatorio",
-                    pattern: {
-                      value: /\S+@\S+\.\S+/,
-                      message: "E-mail no válido",
-                    },
-                  })}
+                  type="submit"
+                  value='Enviar Instrucciones'
+                  className="bg-blue-600 hover:bg-blue-700 w-full p-3 text-white font-black  text-xl cursor-pointer"
                 />
-                {errors.email && (
-                  <ErrorMessage>{errors.email.message}</ErrorMessage>
-                )}
-              </div>
-              
-              <input
-                type="submit"
-                value='Enviar Instrucciones'
-                className="bg-violet-600 hover:bg-violet-700 w-full p-3  text-white font-black  text-xl cursor-pointer rounded-md"
-              />
-            </form>
-              
-            <nav className="p-6 flex flex-col space-y-4">
-              <Link
-                to='/auth/login'
-                className="text-center text-gray-300 font-normal hover:text-violet-400 hover:transition-colors"
-              >
-                ¿Ya tienes cuenta? Iniciar Sesión
-              </Link>
-              
-              <Link
-                to='/auth/register'
-                className="text-center text-gray-300 font-normal hover:text-violet-400 hover:transition-colors"
-              >
-                ¿No tienes cuenta? Crea una
-              </Link>
-            </nav>
+              </form>
+                
+              <nav className="p-6 flex flex-col space-y-4">
+                <Link
+                  to='/auth/login'
+                  className="text-center text-blue-600 hover:underline  hover:transition-colors"
+                >
+                  ¿Ya tienes cuenta? Iniciar Sesión
+                </Link>
+                
+                <Link
+                  to='/auth/register'
+                  className="text-center text-blue-600 hover:underline  hover:transition-colors"
+                >
+                  ¿No tienes cuenta? Crea una
+                </Link>
+              </nav>
+            </div>
+          </div>    
         </>
     )
 }

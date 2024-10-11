@@ -7,7 +7,11 @@ export default {
   ],
   
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
+    },
   },
   plugins: [
     import('@tailwindcss/forms'),

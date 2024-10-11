@@ -51,7 +51,7 @@ export default function AddNoteForm() {
                     id="content" 
                     type="text"
                     placeholder="Contenido de la nota"
-                    className="w-full p-3 border border-gray-300"
+                    className="w-full px-4 py-3 text-md border-b-2 border-gray-300 focus:outline-none focus:border-violet-500 transition duration-200 ease-in-out bg-gray-50 mb-6"
                     {...register('content', {
                         required: 'El Contenido de la nota es obligatorio'
                     })}

@@ -11,13 +11,13 @@ type ProjectFormProps = {
 export default function ProjectForm({errors, register} : ProjectFormProps) {
     return (
         <>
-            <div className="mb-5 space-y-3">
-                <label htmlFor="projectName" className="text-sm uppercase font-bold">
+            <div className="relative">
+                <label htmlFor="projectName" className="mb-1 text-xl font-semibold text-gray-600">
                     Nombre del Proyecto
                 </label>
                 <input
                     id="projectName"
-                    className="w-full p-3  border border-gray-200"
+                    className="w-full px-4 py-2 pr-10 text-md border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200 ease-in-out bg-gray-100 m-4"
                     type="text"
                     placeholder="Nombre del Proyecto"
                     {...register("projectName", {
@@ -30,13 +30,13 @@ export default function ProjectForm({errors, register} : ProjectFormProps) {
                 )}
             </div>
 
-            <div className="mb-5 space-y-3">
-                <label htmlFor="clientName" className="text-sm uppercase font-bold">
+            <div className="relative">
+                <label htmlFor="clientName" className="mb-1 text-xl font-semibold text-gray-600">
                     Nombre Cliente
                 </label>
                 <input
                     id="clientName"
-                    className="w-full p-3  border border-gray-200"
+                    className="w-full px-4 py-2 pr-10 text-md border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200 ease-in-out bg-gray-100 m-4"
                     type="text"
                     placeholder="Nombre del Cliente"
                     {...register("clientName", {
@@ -49,13 +49,13 @@ export default function ProjectForm({errors, register} : ProjectFormProps) {
                 )}
             </div>
 
-            <div className="mb-5 space-y-3">
-                <label htmlFor="description" className="text-sm uppercase font-bold">
+            <div className="relative">
+                <label htmlFor="description" className="mb-1 text-xl font-semibold text-gray-600">
                     Descripción
                 </label>
                 <textarea
                     id="description"
-                    className="w-full p-3  border border-gray-200"
+                    className="w-full px-4 py-2 pr-10 text-md border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-200 ease-in-out bg-gray-200 m-4"
                     placeholder="Descripción del Proyecto"
                     {...register("description", {
                         required: "Una descripción del proyecto es obligatoria"

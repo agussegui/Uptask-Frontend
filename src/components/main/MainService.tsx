@@ -10,21 +10,25 @@ export default function MainService() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Servicio 1 */}
               <div className="bg-white shadow-md p-6 rounded-lg text-center">
-                <img
-                  src="traced-proyecto.png"
-                  alt="Servicio 1"
-                  className="mx-auto mb-4"
-                />
-                <h3 className="text-xl font-bold mb-4">Gestión de Proyectos</h3>
-                <p className="text-gray-700">
-                  Crea proyectos, asigna tareas y colabora con tu equipo de
-                  manera eficiente.
-                </p>
+                <div className="mt-4">
+                  <img
+                    src="project.jpg"
+                    alt="Servicio 1"
+                    className="mx-auto mb-4"
+                  />
+                </div>
+                <div className="mt-10">
+                  <h3 className="text-xl font-bold mb-4">Gestión de Proyectos</h3>
+                  <p className="text-gray-700">
+                    Crea proyectos, asigna tareas y colabora con tu equipo de
+                    manera eficiente.
+                  </p>
+                </div>
               </div>
               {/* Servicio 2 */}
               <div className="bg-white shadow-md p-6 rounded-lg text-center">
                 <img
-                  src="traced-TaskLogo.png"
+                  src="task.jpg"
                   alt="Servicio 2"
                   className="mx-auto mb-4"
                 />
@@ -36,34 +40,42 @@ export default function MainService() {
               </div>
               {/* Servicio 3 */}
               <div className="bg-white shadow-md p-6 rounded-lg text-center">
-                <img
-                  src="traced-colaboradores.png"
-                  alt="Servicio 3"
-                  className="mx-auto mb-4"
-                />
-                <h3 className="text-xl font-bold mb-4">
-                  Gestión de Colaboradores
-                </h3>
-                <p className="text-gray-700">
-                  Invita a colaboradores, asigna permisos y coordina el trabajo
-                  en equipo de manera efectiva.
-                </p>
+                <div className="mt-4">
+                  <img
+                    src="comunication.jpg"
+                    alt="Servicio 3"
+                    className="mx-auto mb-4"
+                  />
+                </div>
+                <div className="mt-20">
+                  <h3 className="text-xl font-bold mb-4">
+                    Gestión de Colaboradores
+                  </h3>
+                  <p className="text-gray-700">
+                    Invita a colaboradores, asigna permisos y coordina el trabajo
+                    en equipo de manera efectiva.
+                  </p>
+                </div>
               </div>
               {/* Servicio 4 */}
               <div className="bg-white shadow-md p-6 rounded-lg text-center">
-                <img
-                  src="traced-comunicacion.png"
-                  alt="Servicio 4"
-                  className="mx-auto mb-4"
-                />
-                <h3 className="text-xl font-bold mb-4">
-                  Seguimiento y Comunicación
-                </h3>
-                <p className="text-gray-700">
-                  Proporcionar herramientas para que los usuarios puedan
-                  realizar un seguimiento del progreso del proyecto y
-                  comunicarse entre ellos.
-                </p>
+                <div className="">
+                  <img
+                    src="seguimiento.jpg"
+                    alt="Servicio 4"
+                    className="mx-auto mb-4"
+                  />
+                </div>
+                <div className="">
+                  <h3 className="text-xl font-bold mb-4">
+                    Seguimiento y Comunicación
+                  </h3>
+                  <p className="text-gray-700">
+                    Proporcionar herramientas para que los usuarios puedan
+                    realizar un seguimiento del progreso del proyecto y
+                    comunicarse entre ellos.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ export default function AppLayout() {
     }
     if(data)return (
         <>
-            <header className="bg-slate-800 py-5">
+            <header className="bg-gray-800 py-5">
                 <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center">
                     <div className="w-64">
                         <Link to={'/'}>
@@ -26,7 +26,6 @@ export default function AppLayout() {
                         name={data.name}
                     />
                 </div>
-            
             </header>
 
             <section className="max-w-screen-2xl mx-auto mt-10 p-5">

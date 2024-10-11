@@ -243,3 +243,12 @@
         transform: rotate(-20deg);
     }
 }
+
+/*Rotate image de register form*/
+.transition-transform {
+  transition: transform 0.5s ease-in-out;
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}
