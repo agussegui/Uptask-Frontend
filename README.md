@@ -35,8 +35,7 @@ Here's the structure of the project:
 │   ├── main.tsx          # Entry point for the React application
 ├── tsconfig.json         # TypeScript configuration
     
-     
-
+```
  
 https://github.com/user-attachments/assets/d549c0ed-1665-4901-b2a9-2f953c21cfca
 
