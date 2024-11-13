@@ -2,10 +2,10 @@
 
 Uptask is a web-based project and task management tool designed for teams looking for an easy way to organize their activities. This application provides features such as project creation and management, task assignment, and the ability to create notes to track task modifications.
 
-##🚀 Características Principales
-    Project and Task Management: Create projects, break activities into tasks, and assign due dates.
-    Intuitive Interface: Responsive and user-friendly design built with Tailwind CSS and React.
-    Secure Authentication: Token-based authentication system with registration, login, and password recovery features.
+##🚀 Main features
+- Project and Task Management: Create projects, break activities into tasks, and assign due dates.
+- Intuitive Interface: Responsive and user-friendly design built with Tailwind CSS and React.
+- Secure Authentication: Token-based authentication system with registration, login, and password recovery features.
 
 ## 🛠️ Technologies User
 - Frontend: React, TypeScript, Tailwind Css
