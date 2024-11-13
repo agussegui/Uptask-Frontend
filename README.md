@@ -17,6 +17,7 @@ Uptask is a web-based project and task management tool designed for teams lookin
  
 ├── public/               
 ├── src/
+
 │   ├── api/              
 │   ├── components/       
 │   ├── hooks/            
