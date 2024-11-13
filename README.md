@@ -15,19 +15,20 @@ Uptask is a web-based project and task management tool designed for teams lookin
 
  📂 Project Structure
  /src
-  /api                
-  /components        
-  /hooks          
-    useAuth.ts
-  /layouts            
-  /lib 
-    axios.ts
-  /types    
-    index.ts
-  /utils              
-  /views              
-  router.tsx
-  main.tsx
+  /api
+  /components
+  /hooks
+    useAuth.ts       
+  /layouts
+  /lib
+    axios.ts         
+  /types
+    index.ts         
+  /utils
+  /views
+  router.tsx         
+  main.tsx           
+
  
 https://github.com/user-attachments/assets/d549c0ed-1665-4901-b2a9-2f953c21cfca
 
