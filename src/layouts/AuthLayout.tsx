@@ -45,7 +45,7 @@ export default function AuthLayout() {
         <>
             <div className="flex h-screen">
                 {/* Panel izquierdo con imagen */}
-                <div className="bg-gray-800 w-1/2 flex flex-col justify-between p-10 text-white">
+                <div className="bg-gray-800 w-1/2 flex-col justify-between p-10 text-white hidden lg:flex">
                     {/* Logo a la izquierda */}
                     <div className="flex items-start">
                         <div className="w-64 ">
@@ -59,7 +59,7 @@ export default function AuthLayout() {
                     </div>
 
                     {/* Imagen activa en grande con animación */}
-                    <div className="flex flex-col items-center justify-center">
+                    <div className="flex flex-col items-center justify-center mt-24">
                         <div className={`w-2/4 transition-transform duration-500 ease-in-out transform ${isSliding ? "-translate-x-full" : ""}`}>
                             <img
                                 src={images[activeIndex].src}
@@ -105,7 +105,7 @@ export default function AuthLayout() {
                 </div>
 
                 {/* Panel derecho con el formulario */}
-                <div className="w-1/2 ">
+                <div className="w-full lg:w-1/2">
                     <div className="">
                         {/* Aquí se renderizará el formulario */}
                         <Outlet />
@@ -113,10 +113,10 @@ export default function AuthLayout() {
                 </div>
             </div>
 
-            <footer className="bg-white text-gray-800 py-4 bottom-0 w-full">
+            <footer className="bg-gray-200 text-gray-800 py-4 bottom-0 w-full">
                 <div className="container mx-auto">
                     <div className="flex justify-center items-center">
-                        <p className="text-center font-bold text-slate-800"> Todos los derechos reservados {new Date().getFullYear()}</p>
+                        <p className="text-center font-bold text-gray-800"> Todos los derechos reservados {new Date().getFullYear()}</p>
                     </div>    
                 </div>
             </footer>
