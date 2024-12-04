@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+## Uptask - Project Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uptask is a web-based project and task management tool designed for teams looking for an easy way to organize their activities. This application provides features such as project creation and management, task assignment, and the ability to create notes to track task modifications.
 
-Currently, two official plugins are available:
+## 🚀 Main features
+- Project and Task Management: Create projects, break activities into tasks, and assign due dates.
+- Intuitive Interface: Responsive and user-friendly design built with Tailwind CSS and React.
+- Secure Authentication: Token-based authentication system with registration, login, and password recovery features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies User
+- Frontend: React, TypeScript, Tailwind Css
+- Backend: Node.js, Express, Swagger
+- DataBases: MondgoDB
+- Email: Nodemailer, Mailtrap.
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Here's the structure of the project:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+├── public/               # Public assets (e.g., images, videos)
+├── src/
+│   ├── api/              # Logic for API requests, controllers, and services
+│   ├── components/       # Reusable components of the application
+│   ├── hooks/            
+│   │   ├── useAuth.ts    # Custom hook for authentication logic
+│   ├── layouts/          # Layout components that wrap pages or sections of the app
+│   ├── lib/              
+│   │   ├── axios.ts      # Configuration and setup for Axios
+│   ├── types/            
+│   │   ├── index.ts      # Centralized TypeScript type definitions and exports
+│   ├── utils/            # Helper functions and general utility logic
+│   ├── views/            # Main views of the application
+│   ├── router.tsx        # Routing configuration for the application
+│   ├── main.tsx          # Entry point for the React application
+├── tsconfig.json         # TypeScript configuration
+    
 ```
+ 
+https://github.com/user-attachments/assets/d549c0ed-1665-4901-b2a9-2f953c21cfca
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
