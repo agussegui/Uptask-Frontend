@@ -3,7 +3,6 @@
 export default {
   content: [
     "./index.html", "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.js"
   ],
   
   theme: {
@@ -15,7 +14,6 @@ export default {
   },
   plugins: [
     import('@tailwindcss/forms'),
-    import('flowbite/plugin')
   ],
   variants: {},
 }
