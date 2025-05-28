@@ -38,7 +38,6 @@ export default function EditProjectForm({data, projectId} : EditProjectFormProps
         const data = {
             formData,
             projectId
-
         }
         mutate(data)
     }

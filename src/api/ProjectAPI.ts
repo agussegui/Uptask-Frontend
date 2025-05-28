@@ -8,7 +8,7 @@ export async function createProject(formData: ProjectFormData) {
         return data
     } catch (error) {
         if(isAxiosError(error) && error.response){
-            throw new Error(error.response.data.error);
+            throw new Error(error.response.data.error); 
         }
     }
 }
