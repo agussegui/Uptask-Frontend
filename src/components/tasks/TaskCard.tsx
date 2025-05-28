@@ -6,7 +6,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { TaskProject } from "@/types/index"
 import { deleteTask } from "@/api/TaskAPI"
 import { toast } from "react-toastify"
-import {useDraggable} from "@dnd-kit/Core"
+import {useDraggable} from '@dnd-kit/core';
 
 type TaskCardProps = {
     task: TaskProject

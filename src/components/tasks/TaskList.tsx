@@ -1,4 +1,4 @@
-import {DndContext, DragEndEvent} from "@dnd-kit/Core"
+import {DndContext, DragEndEvent} from '@dnd-kit/core';
 import { Project, TaskProject, TaskStatus } from "@/types/index"
 import TaskCard from "./TaskCard"
 import { statusTranslations } from "@/locales/es"

@@ -1,4 +1,4 @@
-import {useDroppable} from "@dnd-kit/Core"
+import {useDroppable} from '@dnd-kit/core';
 type DropTaskProps = {
     status: string
 }
